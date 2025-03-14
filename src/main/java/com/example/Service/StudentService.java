@@ -15,6 +15,10 @@ public class StudentService {
             students.add(student);
         }
 
+        public static void deleteStudent(int id) {
+        students.remove(findStudentById(id));
+    }
+
         public static Student findStudentById(int id) {
             for (int i = 0; i < students.size(); i++) {
                 if (students.get(i).getId() == id) {
